@@ -6,9 +6,9 @@ GLOBAL main
 main:
     push ebp
     mov ebp,esp
-    mov esi, [ebp+8]    ; arguments amount:  argc
-    mov ebx, [ebp+12]   ; pointer to the 2nd argument in  the arguments table: argv
-    add ebx, 4          ; start from argv[1] (ignore the progam name)
+    mov esi, [ebp+8]    ;arguments amount: argc
+    mov ebx, [ebp+12]   ;pointer to the arguments table: argv
+    add ebx, 4          ;start from argv[1] (ignore argv[0], the program's name)
 loop:
     push DWORD [ebx]
     call printf

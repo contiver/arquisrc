@@ -1,10 +1,10 @@
-;TP4 ejercicio 2
+; TP4 ejercicio 2
 
 section .text
 GLOBAL _start
 _start:
-    mov eax, 2         ; sys_fork
-    mov ebx, 0         ; NULL
+    mov eax, 2      ;sys_fork
+    xor ebx, ebx    ;NULL
     int 80h
     cmp eax, 0
     je son
@@ -22,7 +22,7 @@ son:
     int 80h
 exit:
     mov eax, 1
-    mov ebx, 0
+    xor ebx, ebx
     int 80h
 section .data
     string db "I'm the father"

@@ -5,11 +5,11 @@ GLOBAL _start
 _start:
     mov eax, 162        ; sys_nanosleep
     mov ebx, seconds
-    mov ecx, 0
+    xor ecx, ecx
     int 80
 ;exit
     mov eax, 1
-    mov ebx, 0
+    xor ebx, ebx
     int 80h
 section .data
     seconds dq 7,       ; seconds
