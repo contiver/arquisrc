@@ -12,5 +12,5 @@ my_write:
     ret
 
 ; Note that on line 8 it's ebp+8, that's because call pushes the RET value
-; into the stack (4 bytes), and later ebp (anoter 4 bytes) is pushed on the
+; into the stack (4 bytes), and later ebp (another 4 bytes) is pushed on the
 ; stackframe creation, leaving the first argument at ebp+8

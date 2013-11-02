@@ -4,14 +4,14 @@ extern printf
 section .text
 GLOBAL main
 main:
-    push ebp
-    mov ebp, esp    ;create stackframe
-    push string
-    push 4
-    push text
-    call printf
-    mov esp, ebp    ;destroy stackframe
-    pop ebp
+    push    ebp         ;create
+    mov     ebp, esp    ;stackframe
+    push    string
+    push    4
+    push    text
+    call    printf
+    mov     esp, ebp    ;destroy
+    pop     ebp         ;stackframe
     ret
 section .data
     text    db  "%d %s", 0
