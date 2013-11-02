@@ -6,9 +6,9 @@ GLOBAL main
 main:
     push    ebp         ;create
     mov     ebp, esp    ;stackframe
-    push    string
-    push    4
     push    text
+    push    4
+    push    string
     call    printf
     mov     esp, ebp    ;destroy
     pop     ebp         ;stackframe
